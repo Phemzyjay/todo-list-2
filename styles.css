@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background: linear-gradient(45deg,#1083f0e3,#134438);
+}
+#wrapper{
+    width:40%;
+    margin: 0 auto;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.822);
+    padding: 50px;
+    color:#ffffff;
+    background: radial-gradient(#1e2029,#110909);   
+}
+#single-task{
+    width: 359px;
+    padding: 15px;
+    background-color:white;
+}
+button{
+    background: linear-gradient(45deg,#15b4dc,#f99369);
+    border:none;
+    color:#fff;
+    padding: 13px 18px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+button:hover {
+    color:green;
+}
+.delete-btn{
+    font-size: 15px;
+    margin-left: 50px;
+    padding: 5px 5px;
+}
+.delete-btn:hover {
+    color:#e60000;
+}
+
+/* Remove default bullets */
+#tasks {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .taskItem {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between checkbox, label, and delete button */
+  }
+  
+  .taskItem input[type="checkbox"] {
+    margin: 0;
+  }
+
+  .taskItem label {
+    flex-grow: 1; /* Ensure label takes up available space */
+    border-radius: 5px;
+    font-size: 25px;
+    color:lightskyblue;
+
+  }
+  
+  .taskItem button {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .taskItem button:hover {
+    background-color: #e60000;
+  }
+
+  /* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    #wrapper {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    #task-area {
+      flex-direction: column; /* Stack input and button */
+      gap: 10px;
+    }
+  
+    #single-task {
+      width: 83%; /* Full width for input */
+    }
+  
+    #task-area button {
+      width: 100%; /* Full width for button */
+    }
+  
+    .taskItem {
+      flex-direction: column; /* Stack checkbox, label, and delete button */
+      align-items: flex-start;
+    }
+  
+    .taskItem button {
+      align-self: flex-end; /* Align delete button to the right */
+    }
+  }
+  
